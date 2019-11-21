@@ -844,7 +844,7 @@ public class GooglePlayAPI {
         params.put("has_permission", "1");
         params.put("source", "android");
         params.put("device_country", this.locale.getCountry().toLowerCase());
-        params.put("lang", this.locale.getLanguage().toLowerCase());
+        params.put("lang", this.locale.getLanguage().replace("_", "-"));
         params.put("client_sig", "38918a453d07199354f8b19af05ec6562ced5788");
         params.put("callerSig", "38918a453d07199354f8b19af05ec6562ced5788");
         return params;
